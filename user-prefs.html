@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Choose</title>
+</head>
+<body onload="onInit()">
+    <h1>User Preferences</h1>
+   <div class="form-container">
+       <form onsubmit="onFormSubmit(event)">
+        <label>Name:
+            <input type="text" name="name" placeholder="Name">
+        </label>
+        <label>Fav Color:
+            <input type="color" name="fav-color">
+        </label>
+        <label>BirthDay:
+            <input type="date" name="birthdate">
+        </label>
+        <label>E-mail:
+            <input type="email" name="email" required>
+        </label>
+        <label>Age:
+            <input type="range" name="age" value=18 oninput="onSetAge(this.value)">
+            <span class="age-value">18</span>
+        </label>
+        <button>Save</button>
+       </form>
+       <button onclick="moveToPage('index.html')">Home</button>
+   </div> 
+
+
+
+
+
+
+
+    <script src="js/utilService.js"></script>
+    <script src="js/storageService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/placeService.js"></script>
+    <script src="js/main-controller.js"></script>
+</body>
+</html>

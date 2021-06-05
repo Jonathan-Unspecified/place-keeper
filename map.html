@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Map</title>
+</head>
+<body onload="onInit(), initMap(29.5492, 34.9542)">
+    <h2>My Locations</h2>
+    <button onclick="moveToPage('index.html')">Home Page</button>
+    <div id="map"></div>
+    <button onclick="getPosition()">Find My Location</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Coords</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="locations-container">
+        </tbody>
+        
+    </table>
+
+
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqZBJmu4AI31JZuVuLQuBrlnYoFPo88Mc">
+        </script>
+    <script src="js/utilService.js"></script>
+    <script src="js/storageService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/placeService.js"></script>
+    <script src="js/main-controller.js"></script>
+</body>
+</html>
